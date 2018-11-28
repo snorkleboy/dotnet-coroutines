@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1d2e3243-c977-4f91-b2dc-3144fcda5b0d" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ConsoleApp2/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <folding>
+                <marker date="1543444873436" expanded="true" signature="6:103" ph="..." />
+                <marker date="1543444873436" expanded="true" signature="126:654" ph="{...}" />
+                <marker date="1543444873436" expanded="true" signature="146:315" ph="{...}" />
+                <marker date="1543444873436" expanded="true" signature="192:309" ph="{...}" />
+                <marker date="1543444873436" expanded="true" signature="338:652" ph="{...}" />
+                <marker date="1543444873436" expanded="true" signature="378:646" ph="{...}" />
+                <marker date="1543444873436" expanded="true" signature="595:636" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoRoutineRunner.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ConsoleApp2/CoRoutineRunner.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <marker date="1543444853364" expanded="true" signature="6:103" ph="..." />
+                <marker date="1543444853364" expanded="true" signature="126:1407" ph="{...}" />
+                <marker date="1543444853364" expanded="true" signature="161:1405" ph="{...}" />
+                <marker date="1543444853364" expanded="true" signature="260:326" ph="{...}" />
+                <marker date="1543444853364" expanded="true" signature="433:641" ph="{...}" />
+                <marker date="1543444853364" expanded="true" signature="523:631" ph="{...}" />
+                <marker date="1543444853364" expanded="true" signature="706:781" ph="{...}" />
+                <marker date="1543444853364" expanded="true" signature="818:1399" ph="{...}" />
+                <marker date="1543444853364" expanded="true" signature="983:1210" ph="{...}" />
+                <marker date="1543444853364" expanded="true" signature="1115:1196" ph="{...}" />
+                <marker date="1543444853364" expanded="true" signature="1252:1389" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoRoutine.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ConsoleApp2/CoRoutine.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <marker date="1543444816620" expanded="true" signature="6:103" ph="..." />
+                <marker date="1543444816620" expanded="true" signature="126:2110" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="155:2108" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="354:410" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="446:681" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="505:597" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="614:671" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="713:1160" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="759:1064" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="846:960" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="981:1050" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="1081:1150" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="1199:2102" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="1277:2066" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="1371:1407" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="1460:1671" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="1729:2052" ph="{...}" />
+                <marker date="1543444816620" expanded="true" signature="1796:1969" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ConsoleApp2/Work.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp2/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp2/CoRoutineRunner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp2/CoRoutine.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ConsoleApp2/CoRoutine.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApp2/CoRoutineRunner.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApp2/Program.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApp2/Work.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="970" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ConsoleApp2 (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ConsoleApp2 (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ConsoleApp2" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/ConsoleApp2/bin/Debug/netcoreapp2.1/ConsoleApp2.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ConsoleApp2" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/ConsoleApp2/ConsoleApp2.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <browser url="http://localhost:5000" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d2e3243-c977-4f91-b2dc-3144fcda5b0d" name="Default" comment="" />
+      <created>1543438638268</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543438638268</updated>
+      <workItem from="1543438640477" duration="6081000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6081000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="970" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4662085" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" weight="0.3298969" />
+      <window_info anchor="right" id="Database" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ConsoleApp2/CoRoutine.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <marker date="1543444816620" expanded="true" signature="6:103" ph="..." />
+            <marker date="1543444816620" expanded="true" signature="126:2110" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="155:2108" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="354:410" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="446:681" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="505:597" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="614:671" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="713:1160" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="759:1064" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="846:960" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="981:1050" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="1081:1150" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="1199:2102" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="1277:2066" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="1371:1407" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="1460:1671" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="1729:2052" ph="{...}" />
+            <marker date="1543444816620" expanded="true" signature="1796:1969" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApp2/CoRoutineRunner.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <marker date="1543444853364" expanded="true" signature="6:103" ph="..." />
+            <marker date="1543444853364" expanded="true" signature="126:1407" ph="{...}" />
+            <marker date="1543444853364" expanded="true" signature="161:1405" ph="{...}" />
+            <marker date="1543444853364" expanded="true" signature="260:326" ph="{...}" />
+            <marker date="1543444853364" expanded="true" signature="433:641" ph="{...}" />
+            <marker date="1543444853364" expanded="true" signature="523:631" ph="{...}" />
+            <marker date="1543444853364" expanded="true" signature="706:781" ph="{...}" />
+            <marker date="1543444853364" expanded="true" signature="818:1399" ph="{...}" />
+            <marker date="1543444853364" expanded="true" signature="983:1210" ph="{...}" />
+            <marker date="1543444853364" expanded="true" signature="1115:1196" ph="{...}" />
+            <marker date="1543444853364" expanded="true" signature="1252:1389" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApp2/Work.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+          <folding>
+            <marker date="1543444889701" expanded="true" signature="6:103" ph="..." />
+            <marker date="1543444889701" expanded="true" signature="125:2333" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="156:2331" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="206:706" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="249:376" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="753:1363" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="796:951" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="1413:1715" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="1456:1637" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="1762:2005" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="1807:1940" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="2054:2325" ph="{...}" />
+            <marker date="1543444889701" expanded="true" signature="2099:2258" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApp2/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <marker date="1543444873436" expanded="true" signature="6:103" ph="..." />
+            <marker date="1543444873436" expanded="true" signature="126:654" ph="{...}" />
+            <marker date="1543444873436" expanded="true" signature="146:315" ph="{...}" />
+            <marker date="1543444873436" expanded="true" signature="192:309" ph="{...}" />
+            <marker date="1543444873436" expanded="true" signature="338:652" ph="{...}" />
+            <marker date="1543444873436" expanded="true" signature="378:646" ph="{...}" />
+            <marker date="1543444873436" expanded="true" signature="595:636" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
