@@ -6,6 +6,18 @@ namespace ConsoleApp2
 {
     public static class Work
     {
+        public static IEnumerator testStart()
+        {
+            while (true)
+            {
+                Console.WriteLine("\n\nstarting first mutli routine");
+                yield return new MultiRoutine(doThing(),doTimedThing());
+                
+                Console.WriteLine("\n\nstarting second routine");
+                yield return new MultiRoutine(doTimedThing(),doSubThing());
+
+            }
+        }
         public static IEnumerator doThing()
         {
             for(var i=0;i<4;i++)

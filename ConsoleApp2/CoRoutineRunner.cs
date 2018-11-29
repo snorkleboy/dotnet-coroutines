@@ -12,7 +12,12 @@ namespace ConsoleApp2
         {
             this.intervalTime = intervalTime;
         }
-        private static List<CoRoutine> coroutines = new List<CoRoutine>();
+        private static List<IRoutineable> coroutines = new List<IRoutineable>();
+
+        public static bool hasWork()
+        {
+            return coroutines.Count > 0;
+        }
         public async Task run()
         {
             Console.WriteLine("run " + DateTime.Now);
@@ -23,16 +28,29 @@ namespace ConsoleApp2
                 await update();
             }
         }
-
-        public static void addCoroutine(IEnumerator enumerator)
+        public static void startCoroutine(params CoRoutine[] routines)
+        {
+            coroutines.Add(new MultiRoutine(routines));
+        }
+        
+        
+        public static void startCoroutine(IEnumerator enumerator)
         {
             coroutines.Add(new CoRoutine(enumerator));
+        }
+        public static void startCoroutine(params IEnumerator[] routines)
+        {
+            coroutines.Add(new CoRoutine(routines));
+        }
+        public static void startCoroutine(IEnumerable<IEnumerator> routines)
+        {
+            coroutines.Add(new CoRoutine(routines));
         }
 
         private async Task update()
         {
             Console.WriteLine("update ");
-            List<CoRoutine> toRemove = new List<CoRoutine>();
+            List<IRoutineable> toRemove = new List<IRoutineable>();
             for(var i = 0;i< coroutines.Count;i++)
             {
                 var coRoutine = coroutines[i];

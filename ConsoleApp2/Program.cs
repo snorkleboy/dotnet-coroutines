@@ -10,7 +10,7 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
 
-            new CoRoutineRunner(TimeSpan.FromSeconds(1)).run();
+            new CoRoutineRunner(TimeSpan.FromSeconds(.1f)).run();
             MainProgram.main();
         }
     }
@@ -18,13 +18,16 @@ namespace ConsoleApp2
     class MainProgram
     {
         public static void main()
+
         {
-            CoRoutineRunner.addCoroutine(Work.doThing());
-            CoRoutineRunner.addCoroutine(Work.doOdaThing());
-            CoRoutineRunner.addCoroutine(Work.doTimedThing());
-            while (true)
+            CoRoutineRunner.startCoroutine(Work.testStart());
+;//            CoRoutineRunner.startCoroutine(Work.doThing());
+//            CoRoutineRunner.startCoroutine(Work.doTimedThing());
+//            CoRoutineRunner.addCoroutine(Work.doOdaThing());
+//            CoRoutineRunner.addCoroutine(Work.doTimedThing());
+            while (CoRoutineRunner.hasWork())
             {
-            
+                
             }
         }
     }
