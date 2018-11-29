@@ -11,11 +11,11 @@ namespace ConsoleApp2
         bool shouldUpdate();
         bool MoveNext();
     }
-    
-    public class MultiRoutine : IRoutineable
+
+    public abstract class Routiner : IRoutineable
     {
         public List<CoRoutine> brotherRoutines;
-        public MultiRoutine(params IEnumerator[] routines)
+        public Routiner(params IEnumerator[] routines)
         {
             brotherRoutines = new List<CoRoutine>();
             foreach (var enumerator in routines)
@@ -23,7 +23,7 @@ namespace ConsoleApp2
                 brotherRoutines.Add(new CoRoutine(enumerator));
             }
         }
-        public MultiRoutine(params CoRoutine[] routines)
+        public Routiner(params CoRoutine[] routines)
         {
             brotherRoutines = new List<CoRoutine>();
             brotherRoutines.AddRange(routines);
@@ -40,7 +40,52 @@ namespace ConsoleApp2
             return false;
         }
 
-        public bool MoveNext()
+        public abstract bool MoveNext();
+    }
+    public class AnyRoutiner : Routiner
+    {
+        public AnyRoutiner(params IEnumerator[] routines):base(routines)
+        {
+ 
+        }
+        public AnyRoutiner(params CoRoutine[] routines):base(routines)
+        {
+
+        }
+        public override bool MoveNext()
+        {
+            List<CoRoutine> toRemove = new List<CoRoutine>();
+            foreach (var cr in brotherRoutines)
+            {
+                if (cr.shouldUpdate())
+                {
+                    if (!cr.MoveNext())
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            foreach (var cr in toRemove)
+            {
+                brotherRoutines.RemoveAt(brotherRoutines.IndexOf(cr));
+            }
+
+            return true;
+        }
+    }
+
+    public class AllRoutiner : Routiner
+    {
+        public AllRoutiner(params IEnumerator[] routines):base(routines)
+        {
+ 
+        }
+        public AllRoutiner(params CoRoutine[] routines):base(routines)
+        {
+
+        }
+        public override bool MoveNext()
         {
             bool moved = false;
             List<CoRoutine> toRemove = new List<CoRoutine>();
@@ -69,8 +114,34 @@ namespace ConsoleApp2
     }
 
     public class CoRoutine: IRoutineable
-
     {
+    private static CoRoutine[] EnumeratorsToCoroutines(IEnumerator[] routines)
+    {
+        var list = new CoRoutine[routines.Length];
+        var count = 0;
+        foreach (var r in routines)
+        {
+            list[count] = (new CoRoutine(r));
+            count++;
+        }
+        return list;
+    }
+    public static IRoutineable all(params IEnumerator[] routines)
+    {
+        return new AllRoutiner(EnumeratorsToCoroutines(routines));
+    }
+    public static IRoutineable any(params IEnumerator[] routines)
+    {
+        return new AnyRoutiner(EnumeratorsToCoroutines(routines));
+    }
+    public static IRoutineable all(params CoRoutine[] routines)
+    {
+        return new AllRoutiner(routines);
+    }
+    public static IRoutineable any(params CoRoutine[] routines)
+    {
+        return new AnyRoutiner(routines);
+    }
     public List<IEnumerator> routines;
     public TimeSpan waitSpan;
     public DateTime waitStartTime;

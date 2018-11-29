@@ -10,11 +10,13 @@ namespace ConsoleApp2
         {
             while (true)
             {
-                Console.WriteLine("\n\nstarting first mutli routine");
-                yield return new MultiRoutine(doThing(),doTimedThing());
+                Console.WriteLine("\n\nstarting multi routine -- ANY");
+                yield return CoRoutine.any(doTimedThing(),doThing());
                 
-                Console.WriteLine("\n\nstarting second routine");
-                yield return new MultiRoutine(doTimedThing(),doSubThing());
+                Console.WriteLine("\n\nstarting multi routine -- ALL");
+                yield return CoRoutine.all(doThing(),doTimedThing());
+                
+
 
             }
         }
@@ -74,7 +76,7 @@ namespace ConsoleApp2
         }
         public static IEnumerator doTimedThing()
         {
-            for(var i=10;i<20;i++)
+            for(var i=0;i<4;i++)
             {
                 Console.WriteLine("doTimedThing do work     doTimedThing");
 

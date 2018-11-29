@@ -10,7 +10,7 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
 
-            new CoRoutineRunner(TimeSpan.FromSeconds(.1f)).run();
+            new CoRoutineRunner(TimeSpan.FromSeconds(.5f)).run();
             MainProgram.main();
         }
     }

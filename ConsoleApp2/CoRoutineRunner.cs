@@ -5,7 +5,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    public class CoRoutineRunner
+    public partial class CoRoutineRunner
+    {
+        public static void startCoroutine(IEnumerator enumerator)
+        {
+            coroutines.Add(new CoRoutine(enumerator));
+        }
+        public static void startCoroutine(params IEnumerator[] routines)
+        {
+            coroutines.Add(new CoRoutine(routines));
+        }
+        public static void startCoroutine(IEnumerable<IEnumerator> routines)
+        {
+            coroutines.Add(new CoRoutine(routines));
+        }
+    }
+    public partial class CoRoutineRunner
     {
         private TimeSpan intervalTime;
         public CoRoutineRunner(TimeSpan intervalTime)
@@ -28,24 +43,9 @@ namespace ConsoleApp2
                 await update();
             }
         }
-        public static void startCoroutine(params CoRoutine[] routines)
-        {
-            coroutines.Add(new MultiRoutine(routines));
-        }
         
         
-        public static void startCoroutine(IEnumerator enumerator)
-        {
-            coroutines.Add(new CoRoutine(enumerator));
-        }
-        public static void startCoroutine(params IEnumerator[] routines)
-        {
-            coroutines.Add(new CoRoutine(routines));
-        }
-        public static void startCoroutine(IEnumerable<IEnumerator> routines)
-        {
-            coroutines.Add(new CoRoutine(routines));
-        }
+
 
         private async Task update()
         {
