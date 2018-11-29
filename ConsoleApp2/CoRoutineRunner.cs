@@ -49,7 +49,7 @@ namespace ConsoleApp2
 
         private async Task update()
         {
-            Console.WriteLine("update ");
+            Console.WriteLine("tick ");
             List<IRoutineable> toRemove = new List<IRoutineable>();
             for(var i = 0;i< coroutines.Count;i++)
             {

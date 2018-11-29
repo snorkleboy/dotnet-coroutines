@@ -11,12 +11,16 @@ namespace ConsoleApp2
             while (true)
             {
                 Console.WriteLine("\n\nstarting multi routine -- ANY");
-                yield return CoRoutine.any(doTimedThing(),doThing());
+                yield return CoRoutine.any(doTimedThingShort(),doThing());
                 
                 Console.WriteLine("\n\nstarting multi routine -- ALL");
-                yield return CoRoutine.all(doThing(),doTimedThing());
+                yield return CoRoutine.all(doThing(),doTimedThingShort());
                 
-
+                Console.WriteLine("\n\nstarting multi routine -- ANY RANDOMS");
+                yield return CoRoutine.any(doTimedThingRandom(),doTimedThingRandom(),doTimedThingRandom());
+                
+                Console.WriteLine("\n\nstarting multi routine -- ALL RANDOMS");
+                yield return CoRoutine.all(doTimedThingRandom(),doTimedThingRandom(),doTimedThingRandom(),doTimedThingRandom());
 
             }
         }
@@ -40,14 +44,14 @@ namespace ConsoleApp2
             for(var i=0;i<4;i++)
             {
                 Console.WriteLine("subRoutine do work      subRoutine");
-                yield return TimeSpan.FromSeconds(3);
+                yield return TimeSpan.FromSeconds(2);
             }
             Console.WriteLine("subRoutine      starting double nested sub routine");
             yield return doSubSubThing();
             Console.WriteLine("subRoutine      returned from double nested sub routine");
         
             Console.WriteLine("subRoutine do work      subRoutine");
-            yield return TimeSpan.FromSeconds(5);
+            yield return TimeSpan.FromSeconds(3);
 
             Console.WriteLine("subRoutine      END");
 
@@ -74,15 +78,38 @@ namespace ConsoleApp2
             Console.WriteLine("doOdaThing      END");
 
         }
-        public static IEnumerator doTimedThing()
+        public static IEnumerator doTimedThingLong()
         {
-            for(var i=0;i<4;i++)
+            for(var i=0;i<15;i++)
             {
-                Console.WriteLine("doTimedThing do work     doTimedThing");
+                Console.WriteLine("doTimedThingLong do work     doTimedThingLong");
+
+                yield return TimeSpan.FromSeconds(2);
+            }
+            Console.WriteLine("doTimedThingLong      END");
+
+        }
+        public static IEnumerator doTimedThingShort()
+        {
+            for(var i=0;i<2;i++)
+            {
+                Console.WriteLine("doTimedThingShort do work     doTimedThingShort");
+
+                yield return TimeSpan.FromSeconds(3);
+            }
+            Console.WriteLine("doTimedThingShort      END");
+
+        }
+        public static IEnumerator doTimedThingRandom()
+        {
+            var num = new Random().Next(10);
+            for(var i=0;i<num;i++)
+            {
+                Console.WriteLine("doTimedThingRandom do work     doTimedThingRandom. randomNum = " + num);
 
                 yield return TimeSpan.FromSeconds(4);
             }
-            Console.WriteLine("doTimedThing      END");
+            Console.WriteLine("doTimedThingRandom      END");
 
         }
     }
