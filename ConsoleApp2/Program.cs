@@ -11,6 +11,8 @@ namespace ConsoleApp2
         {
 
             new CoRoutineRunner(TimeSpan.FromSeconds(.5f)).run();
+            new Game(new GameObject[] {GameObjectFactory.makeDefault("plane"), GameObjectFactory.makeDefault("tank")})
+                .start();
             MainProgram.main();
         }
     }
@@ -18,14 +20,8 @@ namespace ConsoleApp2
     class MainProgram
     {
         public static void main()
-
         {
-            CoRoutineRunner.startCoroutine(Work.testStart());
-;//            CoRoutineRunner.startCoroutine(Work.doThing());
-//            CoRoutineRunner.startCoroutine(Work.doTimedThing());
-//            CoRoutineRunner.addCoroutine(Work.doOdaThing());
-//            CoRoutineRunner.addCoroutine(Work.doTimedThing());
-            while (CoRoutineRunner.hasWork())
+            while (true)
             {
                 
             }

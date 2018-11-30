@@ -6,9 +6,15 @@
       <e p="ConsoleApp2" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="ConsoleApp2.csproj" t="IncludeRecursive" />
-        <e p="CoRoutine.cs" t="Include" />
-        <e p="CoRoutineRunner.cs" t="Include" />
+        <e p="CoRoutines" t="Include">
+          <e p="CoRoutine.cs" t="Include" />
+          <e p="CoRoutineRunner.cs" t="Include" />
+          <e p="utilRoutines" t="Include">
+            <e p="multiRoutines.cs" t="Include" />
+          </e>
+        </e>
         <e p="game" t="Include">
+          <e p="BasicUnit.cs" t="Include" />
           <e p="Game.cs" t="Include" />
           <e p="GO.cs" t="Include" />
         </e>

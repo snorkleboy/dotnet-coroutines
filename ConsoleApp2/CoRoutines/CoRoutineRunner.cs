@@ -19,6 +19,10 @@ namespace ConsoleApp2
         {
             coroutines.Add(new CoRoutine(routines));
         }
+        public static void startCoroutine(CoRoutine routine)
+        {
+            coroutines.Add(routine);
+        }
     }
     public partial class CoRoutineRunner
     {
@@ -44,9 +48,6 @@ namespace ConsoleApp2
             }
         }
         
-        
-
-
         private async Task update()
         {
             Console.WriteLine("tick ");

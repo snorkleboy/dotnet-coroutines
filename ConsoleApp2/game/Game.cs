@@ -1,14 +1,23 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-
-    public class Game
+    public class GameObjectList
     {
         public List<GO> gameObjects = new List<GO>();
 
+        public List<GO> getAll()
+        {
+            return gameObjects;
+        }
+
+        public GameObjectList(GO[] startObjects)
+        {
+            gameObjects.AddRange(startObjects);
+        }
         public void createGameObject(GO gameObj)
         {
             gameObjects.Add(gameObj);
@@ -18,19 +27,53 @@ namespace ConsoleApp2
         {
             gameObjects.RemoveAt(gameObjects.IndexOf(gameObj));
         }
+    }
 
-        public async Task start()
+    public class Game
+    {
+        private static GameObjectList list;
+        public static void createGameObject(GO gameObj)
         {
+            list.createGameObject(gameObj);
+        }
+
+        public static void destroyGameObject(GO gameObj)
+        {
+            list.destroyGameObject(gameObj);
+        }
+        public static List<GO> getAll()
+        {
+            return list.getAll();
+        }
+
+        public Game(GO[] startObjects)
+        {
+            list = new GameObjectList(startObjects);
+            Console.WriteLine("Created");
+        }
+        public void start()
+        {
+            CoRoutine.startCoroutine(run());
+        }
+
+        public IEnumerator run()
+        {
+            foreach (var go in list.getAll())
+            {
+                go.Init();
+            }
             while (true)
             {
-                foreach (var go in gameObjects)
-                {
-                    await Task.Delay(TimeSpan.FromSeconds(.5));
-                    go.update();
-                } 
-            }
-            
+                Console.WriteLine("game update " + list.getAll().Count);
 
+                foreach (var go in list.getAll())
+                {
+                    go.update();
+                    Console.WriteLine(go.render());
+                }
+                yield return null;
+            }
         }
+
     }
 }
