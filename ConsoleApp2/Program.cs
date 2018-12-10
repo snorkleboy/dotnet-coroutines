@@ -9,24 +9,23 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-
-            new CoRoutineRunner(TimeSpan.FromSeconds(.5f)).run();
             new Game(new GameObject[] {GameObjectFactory.makeDefault("plane"), GameObjectFactory.makeDefault("tank")})
                 .start();
-            MainProgram.main();
+            new CoRoutineRunner(TimeSpan.FromSeconds(.1f)).run().Wait();
+
         }
     }
 
-    class MainProgram
-    {
-        public static void main()
-        {
-            while (true)
-            {
-                
-            }
-        }
-    }
+//    class MainProgram
+//    {
+//        public static void main()
+//        {
+//            while (true)
+//            {
+//                
+//            }
+//        }
+//    }
 }
 
 

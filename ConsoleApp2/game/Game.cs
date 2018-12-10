@@ -21,6 +21,7 @@ namespace ConsoleApp2
         public void createGameObject(GO gameObj)
         {
             gameObjects.Add(gameObj);
+            gameObj.Init();
         }
 
         public void destroyGameObject(GO gameObj)
@@ -49,7 +50,6 @@ namespace ConsoleApp2
         public Game(GO[] startObjects)
         {
             list = new GameObjectList(startObjects);
-            Console.WriteLine("Created");
         }
         public void start()
         {
@@ -64,7 +64,7 @@ namespace ConsoleApp2
             }
             while (true)
             {
-                Console.WriteLine("game update " + list.getAll().Count);
+//                Console.WriteLine("game update " + list.getAll().Count);
 
                 foreach (var go in list.getAll())
                 {

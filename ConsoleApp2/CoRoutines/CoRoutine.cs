@@ -111,8 +111,7 @@ namespace ConsoleApp2
                 {
                     if (this.subRoutine != null)
                     {
-                        Console.WriteLine(
-                            "\n\n!!!!setting subcoroutine even though one was already set and not null!!!!!\n\n");
+                        Console.WriteLine("\n\n!!!!setting subcoroutine even though one was already set and not null!!!!!\n\n");
                     }
     
                     this.subRoutine = new CoRoutine(subRoutine);
@@ -121,8 +120,7 @@ namespace ConsoleApp2
                 {
                     if (this.subRoutine != null)
                     {
-                        Console.WriteLine(
-                            "\n\n!!!!setting subcoroutine even though one was already set and not null!!!!!\n\n");
+                        Console.WriteLine("\n\n!!!!setting subcoroutine even though one was already set and not null!!!!!\n\n");
                     }
     
                     this.subRoutine = subCoRoutine;

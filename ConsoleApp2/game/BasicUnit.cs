@@ -20,25 +20,7 @@ namespace ConsoleApp2
         {
             
         }
-        public IEnumerator checkAlive()
-        {
-            while (true)
-            {
 
-                if (this.health.health <= 0)
-                {
-                    Console.WriteLine(this.name + " check Alive -- not alive");
-
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine(this.name + " check Alive -- alive");
-
-                    yield return null;
-                }
-            }
-        }
 
         private void die()
         {
@@ -63,7 +45,25 @@ namespace ConsoleApp2
             //breaks out of main state if checkAlive stops;
             die();
         }
+        public IEnumerator checkAlive()
+        {
+            while (true)
+            {
 
+                if (this.health.health <= 0)
+                {
+//                    Console.WriteLine(this.name + " check Alive -- not alive");
+
+                    yield break;
+                }
+                else
+                {
+//                    Console.WriteLine(this.name + " check Alive -- alive");
+
+                    yield return null;
+                }
+            }
+        }
         public IEnumerator mainState()
         {
             while (true)
@@ -76,7 +76,10 @@ namespace ConsoleApp2
 
                 yield return fight(target);
                 //dead or other enemy dead
-                Game.createGameObject(GameObjectFactory.makeDefault("another one"));
+                if (health.health > 0)
+                {
+                    Game.createGameObject(GameObjectFactory.makeDefault("made from " + name));
+                }
             }
 
         }
@@ -95,17 +98,17 @@ namespace ConsoleApp2
             while (true)
             {
                 Console.WriteLine(this.name + " move around");
-
                 var point = new Position(ran.Next(100), ran.Next(100));
                 yield return CoRoutine.all(
-                    moveX(position.x),
-                    moveY(position.y)
+                    moveX(point.x),
+                    moveY(point.y)
                 );
             }
         }
         public IEnumerator moveX(int x)
         {
-            int thisSpeed;
+
+            int thisSpeed = speed;
             if (position.x > x)
             {
                 thisSpeed = -speed;
@@ -113,14 +116,14 @@ namespace ConsoleApp2
 
             while (position.x - x != 0)
             {
-                Console.WriteLine(this.name + " moveX");
-                position.x = position.x + speed;
+                position.x = position.x + thisSpeed;
+
                 yield return null;
             }
         }
         public IEnumerator moveY(int y)
         {
-            int thisSpeed;
+            int thisSpeed = speed;
             if (position.y > y)
             {
                 thisSpeed = -speed;
@@ -128,9 +131,7 @@ namespace ConsoleApp2
 
             while (position.y - y != 0)
             {
-                Console.WriteLine(this.name + " moveY");
-
-                position.y = position.y + speed;
+                position.y = position.y + thisSpeed;
                 yield return null;
             }
         }
@@ -138,28 +139,28 @@ namespace ConsoleApp2
         {
             while (true)
             {
-                Console.WriteLine("Checking nearby");
-                yield return null;
+//                Console.WriteLine("Checking nearby");
                 foreach (var goThing in Game.getAll())
                 {
-                    if (goThing is BasicUnit go)
+                    if (this != goThing && goThing is BasicUnit go)
                     {
-                        var xdiff = go.position.x - position.x;
-                        var ydiff = go.position.y - position.y;
-                        var dis = Math.Sqrt(Math.Pow(xdiff, 2) - Math.Pow(ydiff, 2));
-
-                        if (dis < 2)
+                        var xdiff = go.position.x - this.position.x;
+                        var ydiff = go.position.y - this.position.y;
+                        var diff = (Math.Pow(xdiff, 2) + Math.Pow(ydiff, 2));
+                        var dis = Math.Sqrt(diff);
+                        if (dis < 10)
                         {
-                            Console.WriteLine("Checking nearby FOUND");
+                            Console.WriteLine("FOUND ENEMY ");
                             target = go;
                             yield break;
                         }
                         else
                         {
-                            Console.WriteLine("Checking nearby NOTFOUND");
+//                            Console.WriteLine("Checking nearby NOTFOUND");
                         }
                     }
                 }
+                yield return null;
             }
 
         }
@@ -168,7 +169,6 @@ namespace ConsoleApp2
         {
             while (target.health.health > 0)
             {
-                
                 yield return null;
                 Console.WriteLine("fighting eachother");
                 target.health.health -= new Random().Next(20);
